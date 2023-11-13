@@ -1,0 +1,64 @@
+.add > h2 {
+  color: $link-hover;
+  font-size: 1.25rem;
+}
+
+.add_form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  column-gap: 5px;
+  @include mq(600px) {
+    grid-template-columns: 90% 10%;
+  }
+}
+.add_form label {
+  position: absolute;
+  left: -10000px;
+}
+.add_inputs {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add_inputs > input,
+.add_inputs > select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid $border-color;
+}
+
+.add_inputs > select {
+  border-bottom: none;
+}
+
+.add_addItem {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  @include flexCenter;
+}
+
+.add-button {
+  height: 100%;
+  width: 100%;
+  color: $inverse-font-color;
+  font-size: 1rem;
+  background: $link-color;
+  border: 1px solid $link-color;
+  border-radius: 10px;
+  padding: 0.25rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-button:focus,
+.add-button:hover {
+  box-shadow: 5px 2px 5px $shadow-color;
+}
+
+.add-button:active {
+  transform: translate(1px, 2px);
+  box-shadow: 1px 1px 0 $font-color;
+}
